@@ -1,0 +1,33 @@
+[versions]
+agp = "8.10.1"
+kotlin = "2.1.10"
+coreKtx = "1.17.0"
+junit = "4.13.2"
+junitVersion = "1.3.0"
+espressoCore = "3.7.0"
+appcompat = "1.7.1"
+material = "1.12.0"
+connectKotlinVersion = "0.7.1"
+protoBufJava = "4.31.1"
+rpcKotlin = "0.7.4"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+connect-kotlin-google-java-ext = { module = "com.connectrpc:connect-kotlin-google-java-ext", version.ref = "connectKotlinVersion" }
+connect-rpc-kotlin = { module = "com.connectrpc:connect-kotlin", version.ref = "rpcKotlin" }
+connect-kotlin-okhttp = { module = "com.connectrpc:connect-kotlin-okhttp", version.ref = "connectKotlinVersion" }
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
+protobuf-java = { module = "com.google.protobuf:protobuf-java", version.ref = "protoBufJava" }
+
+
+
+[plugins]
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+

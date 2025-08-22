@@ -1,0 +1,58 @@
+name: Publish Android Library to GitHub Packages
+
+on:
+  push:
+    branches:
+      - main # Or your default branch, e.g., master, or specific release branches like 'release/**'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read # To checkout the repository
+      packages: write # To publish packages
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17' # Use the JDK version required by your AGP
+          distribution: 'temurin' # Or 'zulu', 'adopt', etc.
+          cache: gradle
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3 # Replaces gradle/wrapper-validation-action
+        # with:
+        #   gradle-version: wrapper # Optional: uses the wrapper version, good for consistency
+        #   cache-read-only: ${{ github.ref != 'refs/heads/main' }} # Optional: only write to cache on main branch pushes
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x ./gradlew
+
+      - name: Build and Publish to GitHub Packages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This is automatically provided by GitHub Actions
+          # If you set up a separate PAT and stored it as a secret (e.g., GH_PACKAGES_TOKEN):
+          # GH_USERNAME: ${{ github.actor }} # The GitHub username of the actor that initiated the workflow
+          # GH_TOKEN_FOR_PACKAGES: ${{ secrets.GH_PACKAGES_TOKEN }} # Your PAT secret
+        run: ./gradlew :sdui-lib:publish # Or :your-library-module:publish
+
+      # Optional: Create a GitHub Release if you want to tag and release formally
+      # This step often runs only on tagged pushes or specific conditions.
+      # - name: Create Release
+      #   if: startsWith(github.ref, 'refs/tags/')
+      #   uses: actions/create-release@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     tag_name: ${{ github.ref_name }}
+      #     release_name: Release ${{ github.ref_name }}
+      #     draft: false
+      #     prerelease: false
+      #     # You can also upload assets like the AAR here if needed,
+      #     # though it's already in GitHub Packages.
+      #     # files: |
+      #     #   path/to/your/sdui-lib.aar
