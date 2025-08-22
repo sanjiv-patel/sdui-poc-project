@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="/Users/sp/Development/sdui-workspace-latest/sdui-poc-project/platforms/android-sdui-lib/sdui-lib"
+    name=":sdui-lib"
+    type="LIBRARY"
+    maven="android-sdui-lib:sdui-lib:unspecified"
+    agpVersion="8.10.1"
+    buildFolder="build"
+    bootClassPath="/Users/sp/Library/Android/sdk/platforms/android-35/android.jar:/Users/sp/Library/Android/sdk/build-tools/35.0.0/core-lambda-stubs.jar"
+    javaSourceLevel="21"
+    compileTarget="android-35"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="debug"/>
+</lint-module>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.10.1" type="incidents">
+
+    <incident
+        id="AndroidGradlePluginVersion"
+        severity="warning"
+        message="A newer version of Gradle than 8.13 is available: 8.14.3">
+        <fix-replace
+            description="Update to 8.14.3"
+            oldString="8.13"
+            replacement="8.14.3"
+            priority="0"/>
+        <location
+            file="$HOME/Development/sdui-workspace-latest/sdui-poc-project/platforms/android-sdui-lib/gradle/wrapper/gradle-wrapper.properties"
+            line="4"
+            column="17"
+            startOffset="111"
+            endLine="4"
+            endColumn="79"
+            endOffset="173"/>
+    </incident>
+
+    <incident
+        id="AndroidGradlePluginVersion"
+        severity="warning"
+        message="A newer version of com.android.library than 8.10.1 is available: 8.12.1">
+        <fix-replace
+            description="Change to 8.12.1"
+            family="Update versions"
+            oldString="8.10.1"
+            replacement="8.12.1"
+            priority="0"/>
+        <location
+            file="$HOME/Development/sdui-workspace-latest/sdui-poc-project/platforms/android-sdui-lib/gradle/libs.versions.toml"
+            line="2"
+            column="7"
+            startOffset="17"
+            endLine="2"
+            endColumn="15"
+            endOffset="25"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of org.jetbrains.kotlin.android than 2.1.10 is available: 2.2.0">
+        <fix-replace
+            description="Change to 2.2.0"
+            family="Update versions"
+            oldString="2.1.10"
+            replacement="2.2.0"
+            priority="0"/>
+        <location
+            file="$HOME/Development/sdui-workspace-latest/sdui-poc-project/platforms/android-sdui-lib/gradle/libs.versions.toml"
+            line="3"
+            column="10"
+            startOffset="35"
+            endLine="3"
+            endColumn="18"
+            endOffset="43"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of org.jetbrains.kotlin:kotlin-reflect than 2.1.10 is available: 2.2.0">
+        <fix-replace
+            description="Change to 2.2.0"
+            family="Update versions"
+            oldString="2.1.10"
+            replacement="2.2.0"
+            priority="0"/>
+        <location
+            file="$HOME/Development/sdui-workspace-latest/sdui-poc-project/platforms/android-sdui-lib/gradle/libs.versions.toml"
+            line="3"
+            column="10"
+            startOffset="35"
+            endLine="3"
+            endColumn="18"
+            endOffset="43"/>
+    </incident>
+
+    <incident
+        id="UseTomlInstead"
+        severity="warning"
+        message="Use version catalog instead">
+        <fix-alternatives>
+            <fix-composite
+                description="Replace with new library catalog declaration, reusing version variable protoBufJava"
+                robot="true"
+                independent="true">
+                <fix-replace
+                    description="Replace with protobuf-kotlin = { module = &quot;com.google.protobuf:protobuf-kotlin&quot;, version.ref = &quot;protoBufJava&quot; }..."
+                    robot="true"
+                    independent="true"
+                    oldString="_lint_insert_begin_"
+                    replacement="protobuf-kotlin = { module = &quot;com.google.protobuf:protobuf-kotlin&quot;, version.ref = &quot;protoBufJava&quot; }&#xA;"
+                    priority="0">
+                    <range
+                        file="$HOME/Development/sdui-workspace-latest/sdui-poc-project/platforms/android-sdui-lib/gradle/libs.versions.toml"
+                        startOffset="1350"
+                        endOffset="1350"/>
+                </fix-replace>
+                <fix-replace
+                    description="Replace with libs.protobuf.kotlin"
+                    robot="true"
+                    independent="true"
+                    replacement="libs.protobuf.kotlin"
+                    priority="0">
+                    <range
+                        file="${:sdui-lib*projectDir}/build.gradle.kts"
+                        startOffset="1249"
+                        endOffset="1293"/>
+                </fix-replace>
+            </fix-composite>
+            <fix-composite
+                description="Replace with new library catalog declaration for google-protobuf-kotlin"
+                robot="true">
+                <fix-replace
+                    description="Replace with protobufKotlin = &quot;4.31.1&quot;..."
+                    robot="true"
+                    oldString="_lint_insert_begin_"
+                    replacement="protobufKotlin = &quot;4.31.1&quot;&#xA;"
+                    priority="0">
+                    <range
+                        file="$HOME/Development/sdui-workspace-latest/sdui-poc-project/platforms/android-sdui-lib/gradle/libs.versions.toml"
+                        startOffset="221"
+                        endOffset="221"/>
+                </fix-replace>
+                <fix-replace
+                    description="Replace with google-protobuf-kotlin = { module = &quot;com.google.protobuf:protobuf-kotlin&quot;, version.ref = &quot;protobufKotlin&quot; }..."
+                    robot="true"
+                    oldString="_lint_insert_begin_"
+                    replacement="google-protobuf-kotlin = { module = &quot;com.google.protobuf:protobuf-kotlin&quot;, version.ref = &quot;protobufKotlin&quot; }&#xA;"
+                    priority="0">
+                    <range
+                        file="$HOME/Development/sdui-workspace-latest/sdui-poc-project/platforms/android-sdui-lib/gradle/libs.versions.toml"
+                        startOffset="346"
+                        endOffset="346"/>
+                </fix-replace>
+                <fix-replace
+                    description="Replace with libs.google.protobuf.kotlin"
+                    robot="true"
+                    replacement="libs.google.protobuf.kotlin"
+                    priority="0">
+                    <range
+                        file="${:sdui-lib*projectDir}/build.gradle.kts"
+                        startOffset="1249"
+                        endOffset="1293"/>
+                </fix-replace>
+            </fix-composite>
+        </fix-alternatives>
+        <location
+            file="${:sdui-lib*projectDir}/build.gradle.kts"
+            line="48"
+            column="21"
+            startOffset="1249"
+            endLine="48"
+            endColumn="65"
+            endOffset="1293"/>
+    </incident>
+
+</incidents>
