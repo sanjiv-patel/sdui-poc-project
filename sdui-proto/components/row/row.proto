@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package components.row;
+
+import "components/properties/v1/ui_component.proto";
+
+message SDUIRow{
+    repeated components.properties.v1.SDUIComponent sdui_component = 1;
+}
+

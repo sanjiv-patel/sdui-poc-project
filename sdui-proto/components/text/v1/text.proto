@@ -1,0 +1,69 @@
+syntax = "proto3";
+
+package components.text.v1;
+
+import "components/properties/v1/action.proto";
+import "components/properties/v1/text_alignment.proto";
+import "components/icon/v1/icon.proto";
+
+message SDUITextView {
+    string text = 1;
+    bool enabled = 2;
+    components.properties.v1.Action action = 3;
+    TextStyle style = 4;
+}
+
+
+
+message TextStyle{
+    bool fullWidth = 1;
+    string backgroundColor = 2;
+    string txtColor = 3;
+    components.properties.v1.TextAlignment textAlignment = 4;
+    int32 max_lines = 5;
+    int32 max_lenght = 6;
+    TextOverFlow text_over_flow = 7;
+    optional AndroidTypography android_typography = 8;
+    optional IOSTypography ios_typography = 9;
+
+}
+
+enum TextOverFlow{
+    WRAP = 0;
+    ELIPSES = 1;
+    CLIP = 2;
+}
+
+enum AndroidTypography{
+    displayLarge = 0;
+    displayMedium = 1;
+    displaySmall = 2;
+    headlineLarge = 3;
+    headlineMedium = 4;
+    headlineSmall = 5;
+    titleLarge = 6;
+    titleMedium = 7;
+    titleSmall = 8;
+    bodyLarge = 9;
+    bodyMedium = 10;
+    bodySmall = 11;
+    labelLarge = 12;
+    labelMedium = 13;
+    labelSmall = 14;
+}
+
+enum IOSTypography{
+    largeTitle = 0;
+    title_1 = 1;
+    title_2 = 2;
+    title_3 =3;
+    headline = 4;
+    body = 5;
+    callout = 6;
+    subhead = 7;
+    footnote = 8;
+    caption_1 = 9;
+    caption_2 = 10;
+}
+
+

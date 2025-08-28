@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package screens.v1;
+
+import "components/properties/v1/ui_component.proto";
+
+message SDUIScreen {
+    string title = 1;
+    repeated components.properties.v1.SDUIComponent sdui_component = 2;
+}
+
+
+
+
+

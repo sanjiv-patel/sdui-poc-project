@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package components.cards;
+
+import "components/properties/v1/action.proto";
+import "components/properties/v1/text_alignment.proto";
+import "components/properties/v1/shape.proto";
+import "components/icon/v1/icon.proto";
+import "components/image/v1/image.proto";
+import "components/button/v1/button.proto";
+
+
+message OfferCard{
+    optional components.image.v1.SDUIImageView image = 1;
+    optional string background_color = 2;
+    optional string header = 3;
+    optional string sub_title = 4;
+    optional components.button.v1.SDUIButton button = 5;
+
+}
+
+
+
+

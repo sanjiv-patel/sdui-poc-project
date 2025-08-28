@@ -31,7 +31,7 @@ android {
     }
 }
 
-val libVersion = "1.0.0" // Define your library version, can be dynamic
+val libVersion = "1.0.2" // Define your library version, can be dynamic
 val libGroupId = "com.cg.android.sdui" // Or your GitHub organization name
 val libArtifactId = "sdui-lib"
 
@@ -83,11 +83,15 @@ afterEvaluate {
                 // The URL format is: https://maven.pkg.github.com/OWNER/REPOSITORY_NAME
                 // OWNER is your GitHub username or organization name.
                 // REPOSITORY_NAME is the name of the repository where the package will be hosted.
-                url = uri("https://maven.pkg.github.com/${System.getenv("sanjiv-patel")}/${System.getenv("sdui-poc-project")?.substringAfter('/')}")
+                //url = uri("https://maven.pkg.github.com/${System.getenv("sanjiv-patel")}/${System.getenv("sdui-poc-project")?.substringAfter('/')}")
+               // url = uri("https://maven.pkg.github.com/sanjiv-patel/${"sdui-poc-project".substringAfter('/')}")
+                url = uri("https://maven.pkg.github.com/sanjiv-patel/sdui-poc-project")
                 credentials {
                     // GITHUB_ACTOR is generally used for username with GITHUB_TOKEN for password
-                    username = System.getenv("sanjiv-patel")
-                    password = System.getenv("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")
+                    //username = System.getenv("sanjiv-patel")
+                    //password = System.getenv("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")
+                    username = "sanjiv-patel"
+                    password = "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"
                 }
             }
         }
@@ -106,10 +110,15 @@ dependencies {
     api(libs.connect.kotlin.google.java.ext)
     implementation(libs.kotlin.reflect)
     implementation(libs.protobuf.java)
-    runtimeOnly(libs.connect.rpc.kotlin)
+    //runtimeOnly(libs.connect.rpc.kotlin)
 
      implementation("com.google.protobuf:protobuf-kotlin:4.31.1")
-
+    //implementation("io.grpc:protoc-gen-grpc-kotlin:1.4.1")
+// https://mvnrepository.com/artifact/io.grpc/grpc-kotlin-stub
+    implementation("io.grpc:grpc-kotlin-stub:1.4.3")
+    //implementation("io.grpc:grpc-stub:1.75.0")
+    // https://mvnrepository.com/artifact/io.grpc/protoc-gen-grpc-kotlin
+    implementation("io.grpc:protoc-gen-grpc-kotlin:1.4.3")
 }
 java {
     toolchain {

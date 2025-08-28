@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package components.icon.v1;
+
+
+message Icon{
+  int32 size = 1;
+  string tint = 2;
+  string src =3;
+}

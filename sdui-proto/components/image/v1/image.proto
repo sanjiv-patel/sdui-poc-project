@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package components.image.v1;
+
+import "components/properties/v1/action.proto";
+
+message SDUIImageView {
+    string src = 1;
+    string alt_text = 2;
+    ImageStyle style = 3;
+    optional components.properties.v1.Action action = 4;
+}
+
+
+
+message ImageStyle{
+    bool fullWidth = 1;
+    ScaleType scale_type = 2;
+    
+}
+
+enum ScaleType{
+    FIT_BOUNDS = 0;
+    CROP = 1;
+    FIT_WIDTH = 2;
+    FIT_HEIGHT = 3;
+}
+
+
+
+

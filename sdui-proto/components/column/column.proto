@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package components.list;
+
+
+import "components/properties/v1/ui_component.proto";
+
+message SDUIColumn{
+   repeated components.properties.v1.SDUIComponent sdui_component = 1;
+}
+

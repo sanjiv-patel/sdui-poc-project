@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package components.button.v1;
+
+import "components/properties/v1/action.proto";
+import "components/properties/v1/text_alignment.proto";
+import "components/properties/v1/shape.proto";
+import "components/icon/v1/icon.proto";
+
+
+message SDUIButton {
+    string label = 1;
+    bool enabled = 2;
+    ButtonStyle style = 3;
+    components.properties.v1.Action action = 4;
+
+}
+
+
+
+message ButtonStyle{
+    bool fullWidth = 1;
+    string backgroundColor = 2;
+    string txtColor = 3;
+    components.properties.v1.TextAlignment textAlignment = 4;
+    components.icon.v1.Icon leadingIcon = 5;
+    components.icon.v1.Icon trailingIcon = 6;
+    optional components.properties.v1.Shape shape = 7;
+}
+
+
+

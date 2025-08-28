@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package components.properties.v1;
+
+
+message Shape {
+    optional RoundedCorners corners = 1;
+    optional Border border = 2;
+}
+
+
+message Border{
+    int32 width = 1;
+    string color = 2;
+    repeated string gradients = 3;
+}
+
+message RoundedCorners{
+    optional int32 all =1;
+    optional int32 left = 2;
+    optional int32 right = 3;
+    optional int32 top = 4;
+    optional int32 bottom = 5;
+}
+
+

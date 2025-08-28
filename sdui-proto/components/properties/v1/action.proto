@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package components.properties.v1;
+
+
+message Action {
+    ActionType action_type = 1;
+    string action_value = 2;
+    string destination = 3;
+}
+
+enum ActionType {
+    NAVIGATION = 0;
+    API_CALL = 1;
+}

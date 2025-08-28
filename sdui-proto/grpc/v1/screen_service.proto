@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package grpc.v1;
+
+import "screens/v1/screen_ui.proto";
+
+
+service ScreenService{
+  rpc getScreenUI(LayoutRequest) returns (screens.v1.SDUIScreen) {}
+}
+
+// The request message containing the user's name.
+message LayoutRequest {
+  string type = 1;
+}
+
+

@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package components.menu;
+
+import "components/properties/v1/action.proto";
+import "components/properties/v1/text_alignment.proto";
+import "components/icon/v1/icon.proto";
+
+
+
+message MenuItem{
+    components.icon.v1.Icon leading_icon = 1;
+    string title = 2;
+    components.icon.v1.Icon trailing_icon = 3;
+    components.properties.v1.Action action = 4;
+}
+
+
+
+

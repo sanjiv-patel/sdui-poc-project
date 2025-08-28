@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package components.grid;
+
+import "components/properties/v1/ui_component.proto";
+
+message SDUIGrid{
+    repeated components.properties.v1.SDUIComponent sdui_component = 1;
+}
