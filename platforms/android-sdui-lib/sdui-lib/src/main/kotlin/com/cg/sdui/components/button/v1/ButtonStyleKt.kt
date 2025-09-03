@@ -156,6 +156,33 @@ public object ButtonStyleKt {
 
     public val ButtonStyleKt.Dsl.trailingIconOrNull: com.cg.sdui.components.icon.v1.Icon?
       get() = _builder.trailingIconOrNull
+
+    /**
+     * `optional .components.properties.v1.Shape shape = 7 [json_name = "shape"];`
+     */
+    public var shape: com.cg.sdui.components.properties.v1.Shape
+      @kotlin.jvm.JvmName("getShape")
+        get() = _builder.shape
+      @kotlin.jvm.JvmName("setShape")
+        set(value) {
+        _builder.shape = value
+      }
+    /**
+     * `optional .components.properties.v1.Shape shape = 7 [json_name = "shape"];`
+     */
+    public fun clearShape() {
+      _builder.clearShape()
+    }
+    /**
+     * `optional .components.properties.v1.Shape shape = 7 [json_name = "shape"];`
+     * @return Whether the shape field is set.
+     */
+    public fun hasShape(): kotlin.Boolean {
+      return _builder.hasShape()
+    }
+
+    public val ButtonStyleKt.Dsl.shapeOrNull: com.cg.sdui.components.properties.v1.Shape?
+      get() = _builder.shapeOrNull
   }
 }
 @kotlin.jvm.JvmSynthetic
@@ -167,4 +194,7 @@ public val com.cg.sdui.components.button.v1.ButtonStyleOrBuilder.leadingIconOrNu
 
 public val com.cg.sdui.components.button.v1.ButtonStyleOrBuilder.trailingIconOrNull: com.cg.sdui.components.icon.v1.Icon?
   get() = if (hasTrailingIcon()) getTrailingIcon() else null
+
+public val com.cg.sdui.components.button.v1.ButtonStyleOrBuilder.shapeOrNull: com.cg.sdui.components.properties.v1.Shape?
+  get() = if (hasShape()) getShape() else null
 

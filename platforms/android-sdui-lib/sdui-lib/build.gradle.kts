@@ -31,7 +31,7 @@ android {
     }
 }
 
-val libVersion = "1.0.2" // Define your library version, can be dynamic
+val libVersion = "1.0.3" // Define your library version, can be dynamic
 val libGroupId = "com.cg.android.sdui" // Or your GitHub organization name
 val libArtifactId = "sdui-lib"
 

@@ -49,21 +49,21 @@ public final class ButtonProto {
       "/v1/action.proto\032-components/properties/" +
       "v1/text_alignment.proto\032$components/prop" +
       "erties/v1/shape.proto\032\035components/icon/v" +
-      "1/icon.proto\"\365\001\n\nSDUIButton\022\024\n\005label\030\001 \001" +
+      "1/icon.proto\"\257\001\n\nSDUIButton\022\024\n\005label\030\001 \001" +
       "(\tR\005label\022\030\n\007enabled\030\002 \001(\010R\007enabled\0227\n\005s" +
       "tyle\030\003 \001(\0132!.components.button.v1.Button" +
       "StyleR\005style\0228\n\006action\030\004 \001(\0132 .component" +
-      "s.properties.v1.ActionR\006action\022:\n\005shape\030" +
-      "\005 \001(\0132\037.components.properties.v1.ShapeH\000" +
-      "R\005shape\210\001\001B\010\n\006_shape\"\272\002\n\013ButtonStyle\022\034\n\t" +
-      "fullWidth\030\001 \001(\010R\tfullWidth\022(\n\017background" +
-      "Color\030\002 \001(\tR\017backgroundColor\022\032\n\010txtColor" +
-      "\030\003 \001(\tR\010txtColor\022M\n\rtextAlignment\030\004 \001(\0162" +
-      "\'.components.properties.v1.TextAlignment" +
-      "R\rtextAlignment\022:\n\013leadingIcon\030\005 \001(\0132\030.c" +
-      "omponents.icon.v1.IconR\013leadingIcon\022<\n\014t" +
-      "railingIcon\030\006 \001(\0132\030.components.icon.v1.I" +
-      "conR\014trailingIconB\241\001\n com.cg.sdui.compon" +
+      "s.properties.v1.ActionR\006action\"\200\003\n\013Butto" +
+      "nStyle\022\034\n\tfullWidth\030\001 \001(\010R\tfullWidth\022(\n\017" +
+      "backgroundColor\030\002 \001(\tR\017backgroundColor\022\032" +
+      "\n\010txtColor\030\003 \001(\tR\010txtColor\022M\n\rtextAlignm" +
+      "ent\030\004 \001(\0162\'.components.properties.v1.Tex" +
+      "tAlignmentR\rtextAlignment\022:\n\013leadingIcon" +
+      "\030\005 \001(\0132\030.components.icon.v1.IconR\013leadin" +
+      "gIcon\022<\n\014trailingIcon\030\006 \001(\0132\030.components" +
+      ".icon.v1.IconR\014trailingIcon\022:\n\005shape\030\007 \001" +
+      "(\0132\037.components.properties.v1.ShapeH\000R\005s" +
+      "hape\210\001\001B\010\n\006_shapeB\241\001\n com.cg.sdui.compon" +
       "ents.button.v1B\013ButtonProtoP\001\242\002\003CBX\252\002\024Co" +
       "mponents.Button.V1\312\002\024Components\\Button\\V" +
       "1\342\002 Components\\Button\\V1\\GPBMetadata\352\002\026C" +
@@ -82,13 +82,13 @@ public final class ButtonProto {
     internal_static_components_button_v1_SDUIButton_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_components_button_v1_SDUIButton_descriptor,
-        new java.lang.String[] { "Label", "Enabled", "Style", "Action", "Shape", });
+        new java.lang.String[] { "Label", "Enabled", "Style", "Action", });
     internal_static_components_button_v1_ButtonStyle_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_components_button_v1_ButtonStyle_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_components_button_v1_ButtonStyle_descriptor,
-        new java.lang.String[] { "FullWidth", "BackgroundColor", "TxtColor", "TextAlignment", "LeadingIcon", "TrailingIcon", });
+        new java.lang.String[] { "FullWidth", "BackgroundColor", "TxtColor", "TextAlignment", "LeadingIcon", "TrailingIcon", "Shape", });
     descriptor.resolveAllFeaturesImmutable();
     com.cg.sdui.components.properties.v1.ActionProto.getDescriptor();
     com.cg.sdui.components.properties.v1.TextAlignmentProto.getDescriptor();

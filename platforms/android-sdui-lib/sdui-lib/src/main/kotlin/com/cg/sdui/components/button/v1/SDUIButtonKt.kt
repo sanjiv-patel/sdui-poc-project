@@ -115,33 +115,6 @@ public object SDUIButtonKt {
 
     public val SDUIButtonKt.Dsl.actionOrNull: com.cg.sdui.components.properties.v1.Action?
       get() = _builder.actionOrNull
-
-    /**
-     * `optional .components.properties.v1.Shape shape = 5 [json_name = "shape"];`
-     */
-    public var shape: com.cg.sdui.components.properties.v1.Shape
-      @kotlin.jvm.JvmName("getShape")
-        get() = _builder.shape
-      @kotlin.jvm.JvmName("setShape")
-        set(value) {
-        _builder.shape = value
-      }
-    /**
-     * `optional .components.properties.v1.Shape shape = 5 [json_name = "shape"];`
-     */
-    public fun clearShape() {
-      _builder.clearShape()
-    }
-    /**
-     * `optional .components.properties.v1.Shape shape = 5 [json_name = "shape"];`
-     * @return Whether the shape field is set.
-     */
-    public fun hasShape(): kotlin.Boolean {
-      return _builder.hasShape()
-    }
-
-    public val SDUIButtonKt.Dsl.shapeOrNull: com.cg.sdui.components.properties.v1.Shape?
-      get() = _builder.shapeOrNull
   }
 }
 @kotlin.jvm.JvmSynthetic
@@ -153,7 +126,4 @@ public val com.cg.sdui.components.button.v1.SDUIButtonOrBuilder.styleOrNull: com
 
 public val com.cg.sdui.components.button.v1.SDUIButtonOrBuilder.actionOrNull: com.cg.sdui.components.properties.v1.Action?
   get() = if (hasAction()) getAction() else null
-
-public val com.cg.sdui.components.button.v1.SDUIButtonOrBuilder.shapeOrNull: com.cg.sdui.components.properties.v1.Shape?
-  get() = if (hasShape()) getShape() else null
 

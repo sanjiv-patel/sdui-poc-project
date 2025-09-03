@@ -205,6 +205,32 @@ private static final long serialVersionUID = 0L;
     return trailingIcon_ == null ? com.cg.sdui.components.icon.v1.Icon.getDefaultInstance() : trailingIcon_;
   }
 
+  public static final int SHAPE_FIELD_NUMBER = 7;
+  private com.cg.sdui.components.properties.v1.Shape shape_;
+  /**
+   * <code>optional .components.properties.v1.Shape shape = 7 [json_name = "shape"];</code>
+   * @return Whether the shape field is set.
+   */
+  @java.lang.Override
+  public boolean hasShape() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <code>optional .components.properties.v1.Shape shape = 7 [json_name = "shape"];</code>
+   * @return The shape.
+   */
+  @java.lang.Override
+  public com.cg.sdui.components.properties.v1.Shape getShape() {
+    return shape_ == null ? com.cg.sdui.components.properties.v1.Shape.getDefaultInstance() : shape_;
+  }
+  /**
+   * <code>optional .components.properties.v1.Shape shape = 7 [json_name = "shape"];</code>
+   */
+  @java.lang.Override
+  public com.cg.sdui.components.properties.v1.ShapeOrBuilder getShapeOrBuilder() {
+    return shape_ == null ? com.cg.sdui.components.properties.v1.Shape.getDefaultInstance() : shape_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -237,6 +263,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(6, getTrailingIcon());
     }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeMessage(7, getShape());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -267,6 +296,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getTrailingIcon());
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getShape());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -300,6 +333,11 @@ private static final long serialVersionUID = 0L;
       if (!getTrailingIcon()
           .equals(other.getTrailingIcon())) return false;
     }
+    if (hasShape() != other.hasShape()) return false;
+    if (hasShape()) {
+      if (!getShape()
+          .equals(other.getShape())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -327,6 +365,10 @@ private static final long serialVersionUID = 0L;
     if (hasTrailingIcon()) {
       hash = (37 * hash) + TRAILINGICON_FIELD_NUMBER;
       hash = (53 * hash) + getTrailingIcon().hashCode();
+    }
+    if (hasShape()) {
+      hash = (37 * hash) + SHAPE_FIELD_NUMBER;
+      hash = (53 * hash) + getShape().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -460,6 +502,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
         getLeadingIconFieldBuilder();
         getTrailingIconFieldBuilder();
+        getShapeFieldBuilder();
       }
     }
     @java.lang.Override
@@ -479,6 +522,11 @@ private static final long serialVersionUID = 0L;
       if (trailingIconBuilder_ != null) {
         trailingIconBuilder_.dispose();
         trailingIconBuilder_ = null;
+      }
+      shape_ = null;
+      if (shapeBuilder_ != null) {
+        shapeBuilder_.dispose();
+        shapeBuilder_ = null;
       }
       return this;
     }
@@ -538,6 +586,12 @@ private static final long serialVersionUID = 0L;
             : trailingIconBuilder_.build();
         to_bitField0_ |= 0x00000002;
       }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.shape_ = shapeBuilder_ == null
+            ? shape_
+            : shapeBuilder_.build();
+        to_bitField0_ |= 0x00000004;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -574,6 +628,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasTrailingIcon()) {
         mergeTrailingIcon(other.getTrailingIcon());
+      }
+      if (other.hasShape()) {
+        mergeShape(other.getShape());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -635,6 +692,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 50
+            case 58: {
+              input.readMessage(
+                  getShapeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1121,6 +1185,127 @@ private static final long serialVersionUID = 0L;
         trailingIcon_ = null;
       }
       return trailingIconBuilder_;
+    }
+
+    private com.cg.sdui.components.properties.v1.Shape shape_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.cg.sdui.components.properties.v1.Shape, com.cg.sdui.components.properties.v1.Shape.Builder, com.cg.sdui.components.properties.v1.ShapeOrBuilder> shapeBuilder_;
+    /**
+     * <code>optional .components.properties.v1.Shape shape = 7 [json_name = "shape"];</code>
+     * @return Whether the shape field is set.
+     */
+    public boolean hasShape() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional .components.properties.v1.Shape shape = 7 [json_name = "shape"];</code>
+     * @return The shape.
+     */
+    public com.cg.sdui.components.properties.v1.Shape getShape() {
+      if (shapeBuilder_ == null) {
+        return shape_ == null ? com.cg.sdui.components.properties.v1.Shape.getDefaultInstance() : shape_;
+      } else {
+        return shapeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>optional .components.properties.v1.Shape shape = 7 [json_name = "shape"];</code>
+     */
+    public Builder setShape(com.cg.sdui.components.properties.v1.Shape value) {
+      if (shapeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        shape_ = value;
+      } else {
+        shapeBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional .components.properties.v1.Shape shape = 7 [json_name = "shape"];</code>
+     */
+    public Builder setShape(
+        com.cg.sdui.components.properties.v1.Shape.Builder builderForValue) {
+      if (shapeBuilder_ == null) {
+        shape_ = builderForValue.build();
+      } else {
+        shapeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional .components.properties.v1.Shape shape = 7 [json_name = "shape"];</code>
+     */
+    public Builder mergeShape(com.cg.sdui.components.properties.v1.Shape value) {
+      if (shapeBuilder_ == null) {
+        if (((bitField0_ & 0x00000040) != 0) &&
+          shape_ != null &&
+          shape_ != com.cg.sdui.components.properties.v1.Shape.getDefaultInstance()) {
+          getShapeBuilder().mergeFrom(value);
+        } else {
+          shape_ = value;
+        }
+      } else {
+        shapeBuilder_.mergeFrom(value);
+      }
+      if (shape_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>optional .components.properties.v1.Shape shape = 7 [json_name = "shape"];</code>
+     */
+    public Builder clearShape() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      shape_ = null;
+      if (shapeBuilder_ != null) {
+        shapeBuilder_.dispose();
+        shapeBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional .components.properties.v1.Shape shape = 7 [json_name = "shape"];</code>
+     */
+    public com.cg.sdui.components.properties.v1.Shape.Builder getShapeBuilder() {
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return getShapeFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>optional .components.properties.v1.Shape shape = 7 [json_name = "shape"];</code>
+     */
+    public com.cg.sdui.components.properties.v1.ShapeOrBuilder getShapeOrBuilder() {
+      if (shapeBuilder_ != null) {
+        return shapeBuilder_.getMessageOrBuilder();
+      } else {
+        return shape_ == null ?
+            com.cg.sdui.components.properties.v1.Shape.getDefaultInstance() : shape_;
+      }
+    }
+    /**
+     * <code>optional .components.properties.v1.Shape shape = 7 [json_name = "shape"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.cg.sdui.components.properties.v1.Shape, com.cg.sdui.components.properties.v1.Shape.Builder, com.cg.sdui.components.properties.v1.ShapeOrBuilder> 
+        getShapeFieldBuilder() {
+      if (shapeBuilder_ == null) {
+        shapeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.cg.sdui.components.properties.v1.Shape, com.cg.sdui.components.properties.v1.Shape.Builder, com.cg.sdui.components.properties.v1.ShapeOrBuilder>(
+                getShape(),
+                getParentForChildren(),
+                isClean());
+        shape_ = null;
+      }
+      return shapeBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:components.button.v1.ButtonStyle)

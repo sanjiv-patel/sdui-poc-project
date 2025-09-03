@@ -56,19 +56,4 @@ public interface SDUIButtonOrBuilder extends
    * <code>.components.properties.v1.Action action = 4 [json_name = "action"];</code>
    */
   com.cg.sdui.components.properties.v1.ActionOrBuilder getActionOrBuilder();
-
-  /**
-   * <code>optional .components.properties.v1.Shape shape = 5 [json_name = "shape"];</code>
-   * @return Whether the shape field is set.
-   */
-  boolean hasShape();
-  /**
-   * <code>optional .components.properties.v1.Shape shape = 5 [json_name = "shape"];</code>
-   * @return The shape.
-   */
-  com.cg.sdui.components.properties.v1.Shape getShape();
-  /**
-   * <code>optional .components.properties.v1.Shape shape = 5 [json_name = "shape"];</code>
-   */
-  com.cg.sdui.components.properties.v1.ShapeOrBuilder getShapeOrBuilder();
 }

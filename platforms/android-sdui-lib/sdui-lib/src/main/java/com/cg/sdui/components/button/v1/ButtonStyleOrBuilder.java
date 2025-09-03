@@ -79,4 +79,19 @@ public interface ButtonStyleOrBuilder extends
    * <code>.components.icon.v1.Icon trailingIcon = 6 [json_name = "trailingIcon"];</code>
    */
   com.cg.sdui.components.icon.v1.IconOrBuilder getTrailingIconOrBuilder();
+
+  /**
+   * <code>optional .components.properties.v1.Shape shape = 7 [json_name = "shape"];</code>
+   * @return Whether the shape field is set.
+   */
+  boolean hasShape();
+  /**
+   * <code>optional .components.properties.v1.Shape shape = 7 [json_name = "shape"];</code>
+   * @return The shape.
+   */
+  com.cg.sdui.components.properties.v1.Shape getShape();
+  /**
+   * <code>optional .components.properties.v1.Shape shape = 7 [json_name = "shape"];</code>
+   */
+  com.cg.sdui.components.properties.v1.ShapeOrBuilder getShapeOrBuilder();
 }
