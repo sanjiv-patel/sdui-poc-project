@@ -92,7 +92,8 @@ afterEvaluate {
                     //password = System.getenv("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")
                     username = "sanjiv-patel"
                    // password = "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"
-                    password = "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"
+                   // password = "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"
+                    password = "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"
                 }
             }
         }
